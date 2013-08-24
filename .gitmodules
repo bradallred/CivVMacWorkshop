@@ -1,0 +1,3 @@
+[submodule "OSW"]
+	path = OSW
+	url = git://github.com/SteamRE/open-steamworks.git
