@@ -8,8 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		A28DD38E17C9192100487FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD38D17C9192100487FCD /* Foundation.framework */; };
-		A28DD39117C9192100487FCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A28DD39017C9192100487FCD /* main.m */; };
+		A28DD39117C9192100487FCD /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A28DD39017C9192100487FCD /* main.mm */; };
+		A28DD39C17C92D8200487FCD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD39B17C92D8200487FCD /* ApplicationServices.framework */; };
+		A28DD39E17C9366500487FCD /* libsteam.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD39D17C9366500487FCD /* libsteam.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A28DD3A017C936F900487FCD /* steamclient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD39F17C936F900487FCD /* steamclient.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A28DD3A217C93B0C00487FCD /* libsteam_api.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD3A117C93B0C00487FCD /* libsteam_api.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A28DD3A517C9A07300487FCD /* LZMAExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3A417C9A07300487FCD /* LZMAExtractor.m */; };
+		A28DD3AE17C9A22A00487FCD /* liblib7zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD3AA17C9A21700487FCD /* liblib7zip.a */; };
+		A28DD3D517C9A2E900487FCD /* 7zBuf.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B117C9A2BE00487FCD /* 7zBuf.c */; };
+		A28DD3D617C9A2E900487FCD /* 7zBuf2.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B317C9A2BE00487FCD /* 7zBuf2.c */; };
+		A28DD3D717C9A2E900487FCD /* 7zDec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B417C9A2BE00487FCD /* 7zDec.c */; };
+		A28DD3D817C9A2E900487FCD /* 7zFile.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B517C9A2BE00487FCD /* 7zFile.c */; };
+		A28DD3D917C9A2E900487FCD /* 7zIn.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B717C9A2BE00487FCD /* 7zIn.c */; };
+		A28DD3DA17C9A2E900487FCD /* 7zStream.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3B817C9A2BE00487FCD /* 7zStream.c */; };
+		A28DD3DB17C9A2E900487FCD /* Alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3BA17C9A2BE00487FCD /* Alloc.c */; };
+		A28DD3DC17C9A2E900487FCD /* CpuArch.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3BC17C9A2BE00487FCD /* CpuArch.c */; };
+		A28DD3DD17C9A2E900487FCD /* Delta.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3BE17C9A2BE00487FCD /* Delta.c */; };
+		A28DD3DE17C9A2E900487FCD /* Lzma2Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3C117C9A2BE00487FCD /* Lzma2Dec.c */; };
+		A28DD3DF17C9A2E900487FCD /* LzmaDec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3C317C9A2BE00487FCD /* LzmaDec.c */; };
+		A28DD3E117C9A2E900487FCD /* Ppmd7.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3C817C9A2BF00487FCD /* Ppmd7.c */; };
+		A28DD3E217C9A2E900487FCD /* Ppmd7Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3CA17C9A2BF00487FCD /* Ppmd7Dec.c */; };
+		A28DD3E317C9A2E900487FCD /* Ppmd8.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3CB17C9A2BF00487FCD /* Ppmd8.c */; };
+		A28DD3E417C9A2E900487FCD /* Ppmd8Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3CD17C9A2BF00487FCD /* Ppmd8Dec.c */; };
+		A28DD3E517C9A30D00487FCD /* 7zAlloc.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */; };
+		A28DD3E617C9A30D00487FCD /* 7zMain.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D417C9A2BF00487FCD /* 7zMain.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A28DD3E717C9A35D00487FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28DD38217C9192100487FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A28DD3A917C9A21700487FCD;
+			remoteInfo = lib7zip;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A28DD38817C9192100487FCD /* CopyFiles */ = {
@@ -26,8 +59,49 @@
 /* Begin PBXFileReference section */
 		A28DD38A17C9192100487FCD /* CivVMacWorkshop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CivVMacWorkshop; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28DD38D17C9192100487FCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A28DD39017C9192100487FCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A28DD39017C9192100487FCD /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		A28DD39317C9192100487FCD /* CivVMacWorkshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CivVMacWorkshop-Prefix.pch"; sourceTree = "<group>"; };
+		A28DD39B17C92D8200487FCD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		A28DD39D17C9366500487FCD /* libsteam.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsteam.dylib; path = /Applications/Steam.app/Contents/MacOS/osx32/libsteam.dylib; sourceTree = "<absolute>"; };
+		A28DD39F17C936F900487FCD /* steamclient.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = steamclient.dylib; path = /Applications/Steam.app/Contents/MacOS/osx32/steamclient.dylib; sourceTree = "<absolute>"; };
+		A28DD3A117C93B0C00487FCD /* libsteam_api.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsteam_api.dylib; path = "/Users/brad/Projects/CivVMacWorkshop/../../Library/Application Support/Steam/SteamApps/common/Sid Meier's Civilization V/Civilization V.app/Contents/MacOS/libsteam_api.dylib"; sourceTree = "<absolute>"; };
+		A28DD3A417C9A07300487FCD /* LZMAExtractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LZMAExtractor.m; path = ../7zip/Classes/LZMASDK/LZMAExtractor.m; sourceTree = "<group>"; };
+		A28DD3AA17C9A21700487FCD /* liblib7zip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib7zip.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28DD3B017C9A2BE00487FCD /* 7z.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7z.h; sourceTree = "<group>"; };
+		A28DD3B117C9A2BE00487FCD /* 7zBuf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zBuf.c; sourceTree = "<group>"; };
+		A28DD3B217C9A2BE00487FCD /* 7zBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zBuf.h; sourceTree = "<group>"; };
+		A28DD3B317C9A2BE00487FCD /* 7zBuf2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zBuf2.c; sourceTree = "<group>"; };
+		A28DD3B417C9A2BE00487FCD /* 7zDec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zDec.c; sourceTree = "<group>"; };
+		A28DD3B517C9A2BE00487FCD /* 7zFile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zFile.c; sourceTree = "<group>"; };
+		A28DD3B617C9A2BE00487FCD /* 7zFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zFile.h; sourceTree = "<group>"; };
+		A28DD3B717C9A2BE00487FCD /* 7zIn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zIn.c; sourceTree = "<group>"; };
+		A28DD3B817C9A2BE00487FCD /* 7zStream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zStream.c; sourceTree = "<group>"; };
+		A28DD3B917C9A2BE00487FCD /* 7zVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zVersion.h; sourceTree = "<group>"; };
+		A28DD3BA17C9A2BE00487FCD /* Alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Alloc.c; sourceTree = "<group>"; };
+		A28DD3BB17C9A2BE00487FCD /* Alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alloc.h; sourceTree = "<group>"; };
+		A28DD3BC17C9A2BE00487FCD /* CpuArch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CpuArch.c; sourceTree = "<group>"; };
+		A28DD3BD17C9A2BE00487FCD /* CpuArch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CpuArch.h; sourceTree = "<group>"; };
+		A28DD3BE17C9A2BE00487FCD /* Delta.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Delta.c; sourceTree = "<group>"; };
+		A28DD3BF17C9A2BE00487FCD /* Delta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delta.h; sourceTree = "<group>"; };
+		A28DD3C017C9A2BE00487FCD /* LzHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzHash.h; sourceTree = "<group>"; };
+		A28DD3C117C9A2BE00487FCD /* Lzma2Dec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Lzma2Dec.c; sourceTree = "<group>"; };
+		A28DD3C217C9A2BE00487FCD /* Lzma2Dec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lzma2Dec.h; sourceTree = "<group>"; };
+		A28DD3C317C9A2BE00487FCD /* LzmaDec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LzmaDec.c; sourceTree = "<group>"; };
+		A28DD3C417C9A2BE00487FCD /* LzmaDec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzmaDec.h; sourceTree = "<group>"; };
+		A28DD3C517C9A2BE00487FCD /* LZMAExtractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZMAExtractor.h; sourceTree = "<group>"; };
+		A28DD3C617C9A2BE00487FCD /* LZMAExtractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZMAExtractor.m; sourceTree = "<group>"; };
+		A28DD3C717C9A2BE00487FCD /* Ppmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ppmd.h; sourceTree = "<group>"; };
+		A28DD3C817C9A2BF00487FCD /* Ppmd7.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Ppmd7.c; sourceTree = "<group>"; };
+		A28DD3C917C9A2BF00487FCD /* Ppmd7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ppmd7.h; sourceTree = "<group>"; };
+		A28DD3CA17C9A2BF00487FCD /* Ppmd7Dec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Ppmd7Dec.c; sourceTree = "<group>"; };
+		A28DD3CB17C9A2BF00487FCD /* Ppmd8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Ppmd8.c; sourceTree = "<group>"; };
+		A28DD3CC17C9A2BF00487FCD /* Ppmd8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ppmd8.h; sourceTree = "<group>"; };
+		A28DD3CD17C9A2BF00487FCD /* Ppmd8Dec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Ppmd8Dec.c; sourceTree = "<group>"; };
+		A28DD3CE17C9A2BF00487FCD /* RotateDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateDefs.h; sourceTree = "<group>"; };
+		A28DD3CF17C9A2BF00487FCD /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zAlloc.c; sourceTree = "<group>"; };
+		A28DD3D317C9A2BF00487FCD /* 7zAlloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zAlloc.h; sourceTree = "<group>"; };
+		A28DD3D417C9A2BF00487FCD /* 7zMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zMain.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +109,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28DD3AE17C9A22A00487FCD /* liblib7zip.a in Frameworks */,
+				A28DD3A217C93B0C00487FCD /* libsteam_api.dylib in Frameworks */,
+				A28DD3A017C936F900487FCD /* steamclient.dylib in Frameworks */,
+				A28DD39E17C9366500487FCD /* libsteam.dylib in Frameworks */,
+				A28DD39C17C92D8200487FCD /* ApplicationServices.framework in Frameworks */,
 				A28DD38E17C9192100487FCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28DD3A717C9A21700487FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +131,8 @@
 		A28DD38117C9192100487FCD = {
 			isa = PBXGroup;
 			children = (
+				A28DD3A317C93BCF00487FCD /* Steam Libs */,
+				A28DD3AF17C9A2BE00487FCD /* LZMASDK */,
 				A28DD38F17C9192100487FCD /* CivVMacWorkshop */,
 				A28DD38C17C9192100487FCD /* Frameworks */,
 				A28DD38B17C9192100487FCD /* Products */,
@@ -55,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A28DD38A17C9192100487FCD /* CivVMacWorkshop */,
+				A28DD3AA17C9A21700487FCD /* liblib7zip.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +151,7 @@
 		A28DD38C17C9192100487FCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A28DD39B17C92D8200487FCD /* ApplicationServices.framework */,
 				A28DD38D17C9192100487FCD /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -70,7 +160,7 @@
 		A28DD38F17C9192100487FCD /* CivVMacWorkshop */ = {
 			isa = PBXGroup;
 			children = (
-				A28DD39017C9192100487FCD /* main.m */,
+				A28DD39017C9192100487FCD /* main.mm */,
 				A28DD39217C9192100487FCD /* Supporting Files */,
 			);
 			path = CivVMacWorkshop;
@@ -79,12 +169,92 @@
 		A28DD39217C9192100487FCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A28DD3A417C9A07300487FCD /* LZMAExtractor.m */,
 				A28DD39317C9192100487FCD /* CivVMacWorkshop-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A28DD3A317C93BCF00487FCD /* Steam Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3A117C93B0C00487FCD /* libsteam_api.dylib */,
+				A28DD39F17C936F900487FCD /* steamclient.dylib */,
+				A28DD39D17C9366500487FCD /* libsteam.dylib */,
+			);
+			name = "Steam Libs";
+			sourceTree = "<group>";
+		};
+		A28DD3AF17C9A2BE00487FCD /* LZMASDK */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3B017C9A2BE00487FCD /* 7z.h */,
+				A28DD3B117C9A2BE00487FCD /* 7zBuf.c */,
+				A28DD3B217C9A2BE00487FCD /* 7zBuf.h */,
+				A28DD3B317C9A2BE00487FCD /* 7zBuf2.c */,
+				A28DD3B417C9A2BE00487FCD /* 7zDec.c */,
+				A28DD3B517C9A2BE00487FCD /* 7zFile.c */,
+				A28DD3B617C9A2BE00487FCD /* 7zFile.h */,
+				A28DD3B717C9A2BE00487FCD /* 7zIn.c */,
+				A28DD3B817C9A2BE00487FCD /* 7zStream.c */,
+				A28DD3B917C9A2BE00487FCD /* 7zVersion.h */,
+				A28DD3BA17C9A2BE00487FCD /* Alloc.c */,
+				A28DD3BB17C9A2BE00487FCD /* Alloc.h */,
+				A28DD3BC17C9A2BE00487FCD /* CpuArch.c */,
+				A28DD3BD17C9A2BE00487FCD /* CpuArch.h */,
+				A28DD3BE17C9A2BE00487FCD /* Delta.c */,
+				A28DD3BF17C9A2BE00487FCD /* Delta.h */,
+				A28DD3C017C9A2BE00487FCD /* LzHash.h */,
+				A28DD3C117C9A2BE00487FCD /* Lzma2Dec.c */,
+				A28DD3C217C9A2BE00487FCD /* Lzma2Dec.h */,
+				A28DD3C317C9A2BE00487FCD /* LzmaDec.c */,
+				A28DD3C417C9A2BE00487FCD /* LzmaDec.h */,
+				A28DD3C517C9A2BE00487FCD /* LZMAExtractor.h */,
+				A28DD3C617C9A2BE00487FCD /* LZMAExtractor.m */,
+				A28DD3C717C9A2BE00487FCD /* Ppmd.h */,
+				A28DD3C817C9A2BF00487FCD /* Ppmd7.c */,
+				A28DD3C917C9A2BF00487FCD /* Ppmd7.h */,
+				A28DD3CA17C9A2BF00487FCD /* Ppmd7Dec.c */,
+				A28DD3CB17C9A2BF00487FCD /* Ppmd8.c */,
+				A28DD3CC17C9A2BF00487FCD /* Ppmd8.h */,
+				A28DD3CD17C9A2BF00487FCD /* Ppmd8Dec.c */,
+				A28DD3CE17C9A2BF00487FCD /* RotateDefs.h */,
+				A28DD3CF17C9A2BF00487FCD /* Types.h */,
+				A28DD3D017C9A2BF00487FCD /* Util */,
+			);
+			name = LZMASDK;
+			path = 7zip/Classes/LZMASDK;
+			sourceTree = "<group>";
+		};
+		A28DD3D017C9A2BF00487FCD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3D117C9A2BF00487FCD /* 7z */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A28DD3D117C9A2BF00487FCD /* 7z */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */,
+				A28DD3D317C9A2BF00487FCD /* 7zAlloc.h */,
+				A28DD3D417C9A2BF00487FCD /* 7zMain.c */,
+			);
+			path = 7z;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A28DD3A817C9A21700487FCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A28DD38917C9192100487FCD /* CivVMacWorkshop */ = {
@@ -98,11 +268,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				A28DD3E817C9A35D00487FCD /* PBXTargetDependency */,
 			);
 			name = CivVMacWorkshop;
 			productName = CivVMacWorkshop;
 			productReference = A28DD38A17C9192100487FCD /* CivVMacWorkshop */;
 			productType = "com.apple.product-type.tool";
+		};
+		A28DD3A917C9A21700487FCD /* lib7zip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A28DD3AB17C9A21800487FCD /* Build configuration list for PBXNativeTarget "lib7zip" */;
+			buildPhases = (
+				A28DD3A617C9A21700487FCD /* Sources */,
+				A28DD3A717C9A21700487FCD /* Frameworks */,
+				A28DD3A817C9A21700487FCD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib7zip;
+			productName = lib7zip;
+			productReference = A28DD3AA17C9A21700487FCD /* liblib7zip.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -125,6 +313,7 @@
 			projectRoot = "";
 			targets = (
 				A28DD38917C9192100487FCD /* CivVMacWorkshop */,
+				A28DD3A917C9A21700487FCD /* lib7zip */,
 			);
 		};
 /* End PBXProject section */
@@ -134,11 +323,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A28DD39117C9192100487FCD /* main.m in Sources */,
+				A28DD3A517C9A07300487FCD /* LZMAExtractor.m in Sources */,
+				A28DD39117C9192100487FCD /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28DD3A617C9A21700487FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28DD3E517C9A30D00487FCD /* 7zAlloc.c in Sources */,
+				A28DD3E617C9A30D00487FCD /* 7zMain.c in Sources */,
+				A28DD3DC17C9A2E900487FCD /* CpuArch.c in Sources */,
+				A28DD3E117C9A2E900487FCD /* Ppmd7.c in Sources */,
+				A28DD3E217C9A2E900487FCD /* Ppmd7Dec.c in Sources */,
+				A28DD3E317C9A2E900487FCD /* Ppmd8.c in Sources */,
+				A28DD3E417C9A2E900487FCD /* Ppmd8Dec.c in Sources */,
+				A28DD3D917C9A2E900487FCD /* 7zIn.c in Sources */,
+				A28DD3D517C9A2E900487FCD /* 7zBuf.c in Sources */,
+				A28DD3D617C9A2E900487FCD /* 7zBuf2.c in Sources */,
+				A28DD3D717C9A2E900487FCD /* 7zDec.c in Sources */,
+				A28DD3D817C9A2E900487FCD /* 7zFile.c in Sources */,
+				A28DD3DA17C9A2E900487FCD /* 7zStream.c in Sources */,
+				A28DD3DB17C9A2E900487FCD /* Alloc.c in Sources */,
+				A28DD3DD17C9A2E900487FCD /* Delta.c in Sources */,
+				A28DD3DE17C9A2E900487FCD /* Lzma2Dec.c in Sources */,
+				A28DD3DF17C9A2E900487FCD /* LzmaDec.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A28DD3E817C9A35D00487FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A28DD3A917C9A21700487FCD /* lib7zip */;
+			targetProxy = A28DD3E717C9A35D00487FCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A28DD39617C9192100487FCD /* Debug */ = {
@@ -148,7 +370,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -168,9 +389,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"OSW/Open Steamworks\" 7zip/Classes/LZMASDK";
 			};
 			name = Debug;
 		};
@@ -181,7 +404,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -195,26 +417,62 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"OSW/Open Steamworks\" 7zip/Classes/LZMASDK";
 			};
 			name = Release;
 		};
 		A28DD39917C9192100487FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivVMacWorkshop/CivVMacWorkshop-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Steam.app/Contents/MacOS/osx32\"",
+					"\"$(SRCROOT)/../../Library/Application Support/Steam/SteamApps/common/Sid Meier's Civilization V/Civilization V.app/Contents/MacOS\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		A28DD39A17C9192100487FCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivVMacWorkshop/CivVMacWorkshop-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Steam.app/Contents/MacOS/osx32\"",
+					"\"$(SRCROOT)/../../Library/Application Support/Steam/SteamApps/common/Sid Meier's Civilization V/Civilization V.app/Contents/MacOS\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+		A28DD3AC17C9A21800487FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		A28DD3AD17C9A21800487FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
@@ -238,6 +496,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A28DD3AB17C9A21800487FCD /* Build configuration list for PBXNativeTarget "lib7zip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28DD3AC17C9A21800487FCD /* Debug */,
+				A28DD3AD17C9A21800487FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
