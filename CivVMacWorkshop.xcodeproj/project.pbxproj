@@ -33,7 +33,6 @@
 		A28DD3E517C9A30D00487FCD /* 7zAlloc.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */; };
 		A28DD3E617C9A30D00487FCD /* 7zMain.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D417C9A2BF00487FCD /* 7zMain.c */; };
 		A28DD40D17C9AE8F00487FCD /* shortcut.icns in Resources */ = {isa = PBXBuildFile; fileRef = A28DD40A17C9AE8F00487FCD /* shortcut.icns */; };
-		A28DD41017C9AEE100487FCD /* run.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD40917C9AE8F00487FCD /* run.sh */; };
 		A28DD41117C9AEE700487FCD /* steam_appid.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD40B17C9AE8F00487FCD /* steam_appid.txt */; };
 		A28DD41417C9AEF400487FCD /* CivVMacWorkshop in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD38A17C9192100487FCD /* CivVMacWorkshop */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 			files = (
 				A28DD41417C9AEF400487FCD /* CivVMacWorkshop in CopyFiles */,
 				A28DD41117C9AEE700487FCD /* steam_appid.txt in CopyFiles */,
-				A28DD41017C9AEE100487FCD /* run.sh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +129,6 @@
 		A28DD3F217C9ADB700487FCD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A28DD3F317C9ADB700487FCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A28DD3F617C9ADB700487FCD /* CivV+Workshop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CivV+Workshop-Info.plist"; sourceTree = "<group>"; };
-		A28DD40917C9AE8F00487FCD /* run.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
 		A28DD40A17C9AE8F00487FCD /* shortcut.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = shortcut.icns; sourceTree = "<group>"; };
 		A28DD40B17C9AE8F00487FCD /* steam_appid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = steam_appid.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,7 +305,6 @@
 		A28DD3F517C9ADB700487FCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A28DD40917C9AE8F00487FCD /* run.sh */,
 				A28DD40A17C9AE8F00487FCD /* shortcut.icns */,
 				A28DD40B17C9AE8F00487FCD /* steam_appid.txt */,
 				A28DD3F617C9ADB700487FCD /* CivV+Workshop-Info.plist */,
