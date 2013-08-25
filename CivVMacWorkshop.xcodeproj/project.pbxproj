@@ -32,6 +32,10 @@
 		A28DD3E417C9A2E900487FCD /* Ppmd8Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3CD17C9A2BF00487FCD /* Ppmd8Dec.c */; };
 		A28DD3E517C9A30D00487FCD /* 7zAlloc.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */; };
 		A28DD3E617C9A30D00487FCD /* 7zMain.c in Sources */ = {isa = PBXBuildFile; fileRef = A28DD3D417C9A2BF00487FCD /* 7zMain.c */; };
+		A28DD40D17C9AE8F00487FCD /* shortcut.icns in Resources */ = {isa = PBXBuildFile; fileRef = A28DD40A17C9AE8F00487FCD /* shortcut.icns */; };
+		A28DD41017C9AEE100487FCD /* run.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD40917C9AE8F00487FCD /* run.sh */; };
+		A28DD41117C9AEE700487FCD /* steam_appid.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD40B17C9AE8F00487FCD /* steam_appid.txt */; };
+		A28DD41417C9AEF400487FCD /* CivVMacWorkshop in CopyFiles */ = {isa = PBXBuildFile; fileRef = A28DD38A17C9192100487FCD /* CivVMacWorkshop */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A28DD3A917C9A21700487FCD;
 			remoteInfo = lib7zip;
+		};
+		A28DD41217C9AEED00487FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28DD38217C9192100487FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A28DD38917C9192100487FCD;
+			remoteInfo = CivVMacWorkshop;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +64,18 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A28DD40F17C9AECE00487FCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				A28DD41417C9AEF400487FCD /* CivVMacWorkshop in CopyFiles */,
+				A28DD41117C9AEE700487FCD /* steam_appid.txt in CopyFiles */,
+				A28DD41017C9AEE100487FCD /* run.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -102,6 +125,15 @@
 		A28DD3D217C9A2BF00487FCD /* 7zAlloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zAlloc.c; sourceTree = "<group>"; };
 		A28DD3D317C9A2BF00487FCD /* 7zAlloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zAlloc.h; sourceTree = "<group>"; };
 		A28DD3D417C9A2BF00487FCD /* 7zMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7zMain.c; sourceTree = "<group>"; };
+		A28DD3ED17C9ADB700487FCD /* CivV+Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CivV+Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28DD3EE17C9ADB700487FCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A28DD3F117C9ADB700487FCD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A28DD3F217C9ADB700487FCD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A28DD3F317C9ADB700487FCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A28DD3F617C9ADB700487FCD /* CivV+Workshop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CivV+Workshop-Info.plist"; sourceTree = "<group>"; };
+		A28DD40917C9AE8F00487FCD /* run.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
+		A28DD40A17C9AE8F00487FCD /* shortcut.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = shortcut.icns; sourceTree = "<group>"; };
+		A28DD40B17C9AE8F00487FCD /* steam_appid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = steam_appid.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +157,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A28DD3EA17C9ADB700487FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,6 +173,7 @@
 				A28DD3A317C93BCF00487FCD /* Steam Libs */,
 				A28DD3AF17C9A2BE00487FCD /* LZMASDK */,
 				A28DD38F17C9192100487FCD /* CivVMacWorkshop */,
+				A28DD3F417C9ADB700487FCD /* CivV+Workshop */,
 				A28DD38C17C9192100487FCD /* Frameworks */,
 				A28DD38B17C9192100487FCD /* Products */,
 			);
@@ -144,6 +184,7 @@
 			children = (
 				A28DD38A17C9192100487FCD /* CivVMacWorkshop */,
 				A28DD3AA17C9A21700487FCD /* liblib7zip.a */,
+				A28DD3ED17C9ADB700487FCD /* CivV+Workshop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +194,8 @@
 			children = (
 				A28DD39B17C92D8200487FCD /* ApplicationServices.framework */,
 				A28DD38D17C9192100487FCD /* Foundation.framework */,
+				A28DD3EE17C9ADB700487FCD /* Cocoa.framework */,
+				A28DD3F017C9ADB700487FCD /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +287,35 @@
 			path = 7z;
 			sourceTree = "<group>";
 		};
+		A28DD3F017C9ADB700487FCD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3F117C9ADB700487FCD /* AppKit.framework */,
+				A28DD3F217C9ADB700487FCD /* CoreData.framework */,
+				A28DD3F317C9ADB700487FCD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A28DD3F417C9ADB700487FCD /* CivV+Workshop */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD3F517C9ADB700487FCD /* Supporting Files */,
+			);
+			path = "CivV+Workshop";
+			sourceTree = "<group>";
+		};
+		A28DD3F517C9ADB700487FCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28DD40917C9AE8F00487FCD /* run.sh */,
+				A28DD40A17C9AE8F00487FCD /* shortcut.icns */,
+				A28DD40B17C9AE8F00487FCD /* steam_appid.txt */,
+				A28DD3F617C9ADB700487FCD /* CivV+Workshop-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -292,6 +364,25 @@
 			productReference = A28DD3AA17C9A21700487FCD /* liblib7zip.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A28DD3EC17C9ADB700487FCD /* CivV+Workshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A28DD40617C9ADB700487FCD /* Build configuration list for PBXNativeTarget "CivV+Workshop" */;
+			buildPhases = (
+				A28DD3E917C9ADB700487FCD /* Sources */,
+				A28DD3EA17C9ADB700487FCD /* Frameworks */,
+				A28DD3EB17C9ADB700487FCD /* Resources */,
+				A28DD40F17C9AECE00487FCD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A28DD41317C9AEED00487FCD /* PBXTargetDependency */,
+			);
+			name = "CivV+Workshop";
+			productName = "CivV+Workshop";
+			productReference = A28DD3ED17C9ADB700487FCD /* CivV+Workshop.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -314,9 +405,21 @@
 			targets = (
 				A28DD38917C9192100487FCD /* CivVMacWorkshop */,
 				A28DD3A917C9A21700487FCD /* lib7zip */,
+				A28DD3EC17C9ADB700487FCD /* CivV+Workshop */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A28DD3EB17C9ADB700487FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28DD40D17C9AE8F00487FCD /* shortcut.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A28DD38617C9192100487FCD /* Sources */ = {
@@ -352,6 +455,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A28DD3E917C9ADB700487FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -359,6 +469,11 @@
 			isa = PBXTargetDependency;
 			target = A28DD3A917C9A21700487FCD /* lib7zip */;
 			targetProxy = A28DD3E717C9A35D00487FCD /* PBXContainerItemProxy */;
+		};
+		A28DD41317C9AEED00487FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A28DD38917C9192100487FCD /* CivVMacWorkshop */;
+			targetProxy = A28DD41217C9AEED00487FCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -476,6 +591,30 @@
 			};
 			name = Release;
 		};
+		A28DD40717C9ADB700487FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CivV+Workshop/CivV+Workshop-Prefix.pch";
+				INFOPLIST_FILE = "CivV+Workshop/CivV+Workshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A28DD40817C9ADB700487FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CivV+Workshop/CivV+Workshop-Prefix.pch";
+				INFOPLIST_FILE = "CivV+Workshop/CivV+Workshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -502,6 +641,14 @@
 			buildConfigurations = (
 				A28DD3AC17C9A21800487FCD /* Debug */,
 				A28DD3AD17C9A21800487FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A28DD40617C9ADB700487FCD /* Build configuration list for PBXNativeTarget "CivV+Workshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28DD40717C9ADB700487FCD /* Debug */,
+				A28DD40817C9ADB700487FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
