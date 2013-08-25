@@ -1,3 +1,6 @@
 [submodule "OSW"]
 	path = OSW
 	url = git://github.com/SteamRE/open-steamworks.git
+[submodule "7zip"]
+	path = 7zip
+	url = git://github.com/mdejong/lzmaSDK.git
