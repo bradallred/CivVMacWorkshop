@@ -482,7 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -509,6 +509,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"OSW/Open Steamworks\" 7zip/Classes/LZMASDK";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
@@ -516,7 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -536,13 +537,13 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"OSW/Open Steamworks\" 7zip/Classes/LZMASDK";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
 		A28DD39917C9192100487FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivVMacWorkshop/CivVMacWorkshop-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
@@ -551,14 +552,12 @@
 					"\"$(SRCROOT)/../../Library/Application Support/Steam/SteamApps/common/Sid Meier's Civilization V/Civilization V.app/Contents/MacOS\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		A28DD39A17C9192100487FCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivVMacWorkshop/CivVMacWorkshop-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
@@ -567,27 +566,22 @@
 					"\"$(SRCROOT)/../../Library/Application Support/Steam/SteamApps/common/Sid Meier's Civilization V/Civilization V.app/Contents/MacOS\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
 		A28DD3AC17C9A21800487FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		A28DD3AD17C9A21800487FCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
@@ -598,6 +592,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivV+Workshop/CivV+Workshop-Prefix.pch";
 				INFOPLIST_FILE = "CivV+Workshop/CivV+Workshop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -610,6 +605,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CivV+Workshop/CivV+Workshop-Prefix.pch";
 				INFOPLIST_FILE = "CivV+Workshop/CivV+Workshop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -643,6 +639,7 @@
 				A28DD3AD17C9A21800487FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A28DD40617C9ADB700487FCD /* Build configuration list for PBXNativeTarget "CivV+Workshop" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +648,7 @@
 				A28DD40817C9ADB700487FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
