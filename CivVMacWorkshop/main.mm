@@ -23,6 +23,8 @@
 
 #import "LZMAExtractor.h"
 
+#import <AppKit/NSWorkspace.h>
+
 bool (*steamInit) (); // SteamAPI_Init()
 void (*steamShutdown) (); // SteamAPI_Shutdown()
 ISteamUser013* (*getUser) (); // SteamUser()
@@ -30,6 +32,7 @@ ISteamUser013* (*getUser) (); // SteamUser()
 int main(int argc, const char * argv[])
 {
 	@autoreleasepool {
+		NSLog(@"Workshop mod installer launched...");
 		// get the URL for Civ V
 		CFURLRef url;
 		OSStatus err = LSFindApplicationForInfo(kLSUnknownCreator, CFSTR("com.aspyr.civ5xp.steam"), NULL, NULL, &url);
@@ -72,6 +75,9 @@ int main(int argc, const char * argv[])
 										preserveDir:YES];
 					// TODO: delete the archive now?
 				}
+				NSWorkspace* ws = [NSWorkspace sharedWorkspace];
+				NSURL* steamURL = [NSURL URLWithString:@"steam://run/8930"];
+				[ws openURL:steamURL];
 			} else {
 				NSLog(@"couldn't get the Steam User");
 			}

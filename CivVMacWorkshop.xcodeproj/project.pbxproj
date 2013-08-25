@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A28DD38E17C9192100487FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD38D17C9192100487FCD /* Foundation.framework */; };
+		A28B513917C9BA5300494666 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD3EE17C9ADB700487FCD /* Cocoa.framework */; };
 		A28DD39117C9192100487FCD /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A28DD39017C9192100487FCD /* main.mm */; };
 		A28DD39C17C92D8200487FCD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD39B17C92D8200487FCD /* ApplicationServices.framework */; };
 		A28DD39E17C9366500487FCD /* libsteam.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A28DD39D17C9366500487FCD /* libsteam.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -141,12 +141,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28B513917C9BA5300494666 /* Cocoa.framework in Frameworks */,
 				A28DD3AE17C9A22A00487FCD /* liblib7zip.a in Frameworks */,
 				A28DD3A217C93B0C00487FCD /* libsteam_api.dylib in Frameworks */,
 				A28DD3A017C936F900487FCD /* steamclient.dylib in Frameworks */,
 				A28DD39E17C9366500487FCD /* libsteam.dylib in Frameworks */,
 				A28DD39C17C92D8200487FCD /* ApplicationServices.framework in Frameworks */,
-				A28DD38E17C9192100487FCD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
