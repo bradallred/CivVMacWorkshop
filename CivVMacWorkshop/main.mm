@@ -24,9 +24,7 @@
 #import "LZMAExtractor.h"
 
 bool (*steamInit) (); // SteamAPI_Init()
-//HSteamPipe (*getPipe) (); // SteamAPI_GetHSteamPipe()
-//HSteamUser (*getUser) (); // SteamAPI_GetHSteamUser()
-
+void (*steamShutdown) (); // SteamAPI_Shutdown()
 ISteamUser013* (*getUser) (); // SteamUser()
 
 int main(int argc, const char * argv[])
@@ -41,49 +39,48 @@ int main(int argc, const char * argv[])
 
 		void* handle = dlopen([dylibPath fileSystemRepresentation], RTLD_NOW);
 		steamInit = (bool (*)())dlsym(handle, "SteamAPI_Init");
-		//getPipe = (HSteamPipe (*)())dlsym(handle, "SteamAPI_GetHSteamPipe");
+		steamShutdown = (void (*)())dlsym(handle, "SteamAPI_Shutdown");
 		getUser = (ISteamUser013* (*)())dlsym(handle, "SteamUser");
 
-	    // check if the steam libraries are loaded
-		CSteamAPILoader* loader = new CSteamAPILoader();
-		CreateInterfaceFn factory = loader->GetSteam3Factory();
-		delete loader;
+		if ((*steamInit)()) {
+			ISteamUser013* user = (*getUser)();
+			if (user) {
+				char dataDir[PATH_MAX];
+				user->GetUserDataFolder(dataDir, PATH_MAX);
 
-		//set up communication with IPC server
-		if (!(*steamInit)()) {
+				NSString* modPath = [NSString stringWithCString:dataDir encoding:NSASCIIStringEncoding];
+				modPath = [modPath stringByDeletingLastPathComponent];
+				modPath = [modPath stringByDeletingLastPathComponent];
+				modPath = [modPath stringByAppendingPathComponent:@"ugc"];
+
+				NSFileManager* fm = [NSFileManager defaultManager];
+				NSError* error = nil;
+				NSArray* paths = [fm subpathsOfDirectoryAtPath:modPath error:&error];
+				NSArray* mods = [paths pathsMatchingExtensions:@[@"civ5mod"]];
+
+				NSArray* docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+				NSString* docDir = [docDirs objectAtIndex:0];
+				NSString* installDir = [docDir stringByAppendingFormat:@"/Aspyr/Sid Meier's Civilization 5/MODS"];
+
+				[fm createDirectoryAtPath:installDir withIntermediateDirectories:YES attributes:nil error:&error];
+
+				for (NSString* mod in mods) {
+					NSString* modName = [[mod lastPathComponent] stringByDeletingPathExtension];
+					NSLog(@"installing %@ to %@", modName, installDir);
+					[LZMAExtractor extract7zArchive:[modPath stringByAppendingFormat:@"/%@", mod]
+											dirName:[installDir stringByAppendingPathComponent:modName]
+										preserveDir:YES];
+					// TODO: delete the archive now?
+				}
+			} else {
+				NSLog(@"couldn't get the Steam User");
+			}
+		} else {
 			NSLog(@"steam api initialization failed!");
 		}
 
-		ISteamUser013* user = (*getUser)();
-
-		char dataDir[PATH_MAX];
-		user->GetUserDataFolder(dataDir, PATH_MAX);
-
-		NSString* modPath = [NSString stringWithCString:dataDir encoding:NSASCIIStringEncoding];
-		modPath = [modPath stringByDeletingLastPathComponent];
-		modPath = [modPath stringByDeletingLastPathComponent];
-		modPath = [modPath stringByAppendingPathComponent:@"ugc"];
-
-		NSFileManager* fm = [NSFileManager defaultManager];
-		NSError* error = nil;
-		NSArray* paths = [fm subpathsOfDirectoryAtPath:modPath error:&error];
-		NSArray* mods = [paths pathsMatchingExtensions:@[@"civ5mod"]];
-
-		NSArray* docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-		NSString* docDir = [docDirs objectAtIndex:0];
-		NSString* installDir = [docDir stringByAppendingFormat:@"/Aspyr/Sid Meier's Civilization 5/MODS"];
-
-		[fm createDirectoryAtPath:installDir withIntermediateDirectories:YES attributes:nil error:&error];
-		
-		for (NSString* mod in mods) {
-			//NSString* installPath = [installDir stringByAppendingPathComponent:[mod lastPathComponent]];
-			//[fm moveItemAtPath:[modPath stringByAppendingFormat:@"/%@", mod] toPath:installPath error:&error];
-			NSString* modName = [[mod lastPathComponent] stringByDeletingPathExtension];
-			[LZMAExtractor extract7zArchive:[modPath stringByAppendingFormat:@"/%@", mod]
-									dirName:[installDir stringByAppendingPathComponent:modName]
-								preserveDir:YES];
-		}
-		
+		// close up shop
+		(*steamShutdown)();
 		dlclose(handle);
 	}
     return 0;
